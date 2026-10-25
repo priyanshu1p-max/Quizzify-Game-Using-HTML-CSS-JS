@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quizzify - Play</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="startOverlay" class="start-overlay">
+        <div class="start-panel">
+          <p class="eyebrow">Round starting</p>
+          <h2>Ready?</h2>
+          <div class="start-ring"></div>
+        </div>
+      </div>
+
+      <section class="card game-card">
+        <div id="loader" class="loader"></div>
+
+        <div id="game" class="hidden">
+          <div id="hud">
+            <div class="hud-block">
+              <p class="hud-label">Current Player</p>
+              <div id="playerBadge" class="category-badge">Player 1</div>
+            </div>
+            <div class="hud-block">
+              <p class="hud-label">Category</p>
+              <div id="categoryBadge" class="category-badge">General Knowledge</div>
+            </div>
+            <div class="hud-block">
+              <p class="hud-label">Timer</p>
+              <h2 id="timer" class="hud-main-text">15s</h2>
+            </div>
+          </div>
+
+          <div class="hud-row">
+            <div class="progress-wrapper">
+              <p id="progressText" class="hud-label">Question 0/10</p>
+              <div id="progressBar">
+                <div id="progressBarFull"></div>
+              </div>
+            </div>
+            <div class="score-box">
+              <p class="hud-label">Score</p>
+              <h2 id="score" class="hud-main-text">0</h2>
+            </div>
+            <div id="streakBadge" class="streak-badge">Streak x0</div>
+          </div>
+
+          <h2 id="question">Loading question...</h2>
+
+          <div class="choice-stack">
+            <button class="choice-container" data-number="1" type="button"></button>
+            <button class="choice-container" data-number="2" type="button"></button>
+            <button class="choice-container" data-number="3" type="button"></button>
+            <button class="choice-container" data-number="4" type="button"></button>
+          </div>
+
+          <button id="resetBtn" class="btn btn-secondary reset-btn" type="button">Reset Game</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="levelPopup" class="level-popup hidden">
+      <div class="popup-box">
+        <p class="eyebrow">Level complete</p>
+        <h3>Excellent run!</h3>
+      </div>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>

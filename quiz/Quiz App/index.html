@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quizzify | Quiz Platform</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card home-card hero-panel">
+        <p class="eyebrow">Quiz challenge</p>
+        <h1 class="hero-title">The Quizzify Game</h1>
+        <p class="subtitle">Choose a category and test your knowledge in a fast-paced quiz.</p>
+
+        <label class="field-label" for="categorySelect">Choose a category</label>
+        <select id="categorySelect" class="select-field">
+          <option value="General Knowledge">General Knowledge</option>
+          <option value="India">India</option>
+          <option value="Science">Science</option>
+        </select>
+
+        <label class="field-label" for="difficultySelect">Difficulty</label>
+        <select id="difficultySelect" class="select-field">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+
+        <label class="field-label" for="modeSelect">Mode</label>
+        <select id="modeSelect" class="select-field">
+          <option value="solo">Solo</option>
+          <option value="multiplayer" selected>Multiplayer</option>
+          <option value="team">Team vs Team</option>
+        </select>
+
+        <label class="field-label" for="playerCount">Players</label>
+        <select id="playerCount" class="select-field">
+          <option value="1">1 Player</option>
+          <option value="2" selected>2 Players</option>
+          <option value="3">3 Players</option>
+          <option value="4">4 Players</option>
+        </select>
+
+        <label class="field-label" for="playerNames">Player names (optional)</label>
+        <input id="playerNames" class="select-field" type="text" placeholder="Alice, Bob, Charlie" />
+
+        <label class="field-label" for="questionCount">Number of questions</label>
+        <select id="questionCount" class="select-field">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+
+        <div class="button-stack">
+          <button id="startBtn" class="btn btn-primary" type="button">Play</button>
+          <a class="btn btn-secondary" href="./highscores.html">High Scores</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const categorySelect = document.getElementById('categorySelect');
+      const difficultySelect = document.getElementById('difficultySelect');
+      const modeSelect = document.getElementById('modeSelect');
+      const startBtn = document.getElementById('startBtn');
+      const playerCount = document.getElementById('playerCount');
+      const playerNames = document.getElementById('playerNames');
+      const questionCount = document.getElementById('questionCount');
+
+      const savedCategory = localStorage.getItem('selectedCategory');
+      const savedQuestionCount = localStorage.getItem('questionCount');
+      const savedDifficulty = localStorage.getItem('selectedDifficulty');
+      const savedMode = localStorage.getItem('gameMode');
+      if (savedCategory) {
+        categorySelect.value = savedCategory;
+      }
+      if (savedQuestionCount) {
+        questionCount.value = savedQuestionCount;
+      }
+      if (savedDifficulty) {
+        difficultySelect.value = savedDifficulty;
+      }
+      if (savedMode) {
+        modeSelect.value = savedMode;
+      }
+
+      function buildPlayers() {
+        const rawNames = playerNames.value.trim();
+        const mode = modeSelect.value;
+        const count = Number(playerCount.value) || 2;
+
+        if (rawNames) {
+          const names = rawNames.split(',').map((name) => name.trim()).filter(Boolean);
+          if (names.length) return names.slice(0, count);
+        }
+
+        if (mode === 'team') {
+          return ['Team A', 'Team B'];
+        }
+
+        return Array.from({ length: count }, (_, index) => `Player ${index + 1}`);
+      }
+
+      startBtn.addEventListener('click', () => {
+        const selectedCategory = categorySelect.value;
+        const selectedDifficulty = difficultySelect.value;
+        const selectedMode = modeSelect.value;
+        const players = buildPlayers();
+        const selectedQuestionCount = Number(questionCount.value) || 10;
+
+        localStorage.setItem('selectedCategory', selectedCategory);
+        localStorage.setItem('selectedDifficulty', selectedDifficulty);
+        localStorage.setItem('gameMode', selectedMode);
+        localStorage.setItem('players', JSON.stringify(players));
+        localStorage.setItem('multiplayerMode', JSON.stringify(selectedMode !== 'solo'));
+        localStorage.setItem('questionCount', String(selectedQuestionCount));
+        window.location.href = './game.html';
+      });
+    </script>
+  </body>
+</html>

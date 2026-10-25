@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card score-card">
+        <p class="eyebrow">Round complete</p>
+        <h1 id="finalScore">0</h1>
+
+        <form id="scoreForm" class="score-form">
+          <label class="field-label" for="username">Enter your name</label>
+          <input type="text" name="username" id="username" placeholder="Your name" maxlength="18" />
+          <button type="submit" class="btn btn-primary" id="saveScoreBtn" disabled>Save Score</button>
+        </form>
+
+        <div class="button-stack">
+          <a class="btn btn-secondary" href="./game.html">Play Again</a>
+          <a class="btn btn-secondary" href="./index.html">Go Home</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./end.js"></script>
+  </body>
+</html>

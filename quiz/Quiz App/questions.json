@@ -1,0 +1,110 @@
+[
+  {
+    "category": "General Knowledge",
+    "question": "The International Literacy Day is observed on?",
+    "choices": ["Sep 8", "Nov 28", "May 2", "Sep 22"],
+    "answer": 1
+  },
+  {
+    "category": "General Knowledge",
+    "question": "Which day is observed as World Standards Day?",
+    "choices": ["Jun 26", "Oct 14", "Nov 15", "Dec 2"],
+    "answer": 2
+  },
+  {
+    "category": "General Knowledge",
+    "question": "Who is the richest person in the world?",
+    "choices": ["Bill Gates", "Elon Musk", "Bernard Arnault & Family", "Jeff Bezos"],
+    "answer": 3
+  },
+  {
+    "category": "General Knowledge",
+    "question": "What is the full form of CBI?",
+    "choices": ["Central Bank of India", "Crime Branch of India", "Central Bureau of Investigation", "Corporate Business Intelligence"],
+    "answer": 3
+  },
+  {
+    "category": "General Knowledge",
+    "question": "What is the capital city of Japan?",
+    "choices": ["Seoul", "Tokyo", "Osaka", "Kyoto"],
+    "answer": 2
+  },
+  {
+    "category": "General Knowledge",
+    "question": "Which planet is known as the Red Planet?",
+    "choices": ["Venus", "Mars", "Jupiter", "Mercury"],
+    "answer": 2
+  },
+  {
+    "category": "India",
+    "question": "The language of Lakshadweep is?",
+    "choices": ["Hindi", "Tamil", "Telugu", "Malayalam"],
+    "answer": 4
+  },
+  {
+    "category": "India",
+    "question": "Who is the current Prime Minister of India?",
+    "choices": ["Rahul Gandhi", "Narendra Modi", "Manmohan Singh", "Jawaharlal Nehru"],
+    "answer": 2
+  },
+  {
+    "category": "India",
+    "question": "Where is the Taj Mahal located?",
+    "choices": ["Agra", "Delhi", "Mumbai", "Mathura"],
+    "answer": 1
+  },
+  {
+    "category": "India",
+    "question": "Who was the first President of India?",
+    "choices": ["A.P.J. Abdul Kalam", "Dr. Rajendra Prasad", "Sarvepalli Radhakrishnan", "Zakir Hussain"],
+    "answer": 2
+  },
+  {
+    "category": "India",
+    "question": "On which day is Independence Day celebrated in India?",
+    "choices": ["14 November", "15 August", "26 January", "2 October"],
+    "answer": 2
+  },
+  {
+    "category": "India",
+    "question": "Which one is a Union Territory?",
+    "choices": ["Daman & Diu", "New Delhi", "Mumbai", "Hyderabad"],
+    "answer": 1
+  },
+  {
+    "category": "Science",
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "choices": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+    "answer": 2
+  },
+  {
+    "category": "Science",
+    "question": "What is the chemical formula of water?",
+    "choices": ["CO2", "H2O", "O2", "NaCl"],
+    "answer": 2
+  },
+  {
+    "category": "Science",
+    "question": "Which planet is known as the Red Planet?",
+    "choices": ["Venus", "Mars", "Jupiter", "Mercury"],
+    "answer": 2
+  },
+  {
+    "category": "Science",
+    "question": "What is the hardest natural substance on Earth?",
+    "choices": ["Steel", "Gold", "Diamond", "Quartz"],
+    "answer": 3
+  },
+  {
+    "category": "Science",
+    "question": "Which part of the human body pumps blood?",
+    "choices": ["Brain", "Lungs", "Heart", "Kidney"],
+    "answer": 3
+  },
+  {
+    "category": "Science",
+    "question": "Which organ helps us breathe?",
+    "choices": ["Liver", "Lungs", "Stomach", "Brain"],
+    "answer": 2
+  }
+]
